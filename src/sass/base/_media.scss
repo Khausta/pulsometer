@@ -9,6 +9,20 @@
             justify-content: space-around;
         }
     }
+    .consultation {
+        .title {
+            text-align: center;
+        }
+        &__desc {
+            text-align: center;
+        }
+        .feed_form {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 36px; 
+      }
+
+    }
 }
 @media (max-width: 575px) {
     .promo {
