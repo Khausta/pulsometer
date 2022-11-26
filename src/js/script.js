@@ -1,11 +1,34 @@
-var name = "Anna";
-let number = 7;
-const pi = 3.14;
+
+$(document).ready(function(){
+        $('.carousel__inner').slick({
+                speed: 1200,
+                adaptiveHeight: true,
+                prevArrow: '<button type="button" class="slick-prev"><img src="../icons/carousel_prev_arrow.png"></button>',
+                nextArrow: '<button type="button" class="slick-next"><img src="../icons/carousel_next_arrow.png"></img></button>',
+                responsive: [
+                        {
+                        breakpoint: 768,
+                        settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
+                                infinite: true,
+                                dots: true       
+                        }
+                }
+                ] 
+              });
+      });
+
+
+
+// var name = "Anna";
+// let number = 7;
+// const pi = 3.14;
 
 
 // pi = 2; - 'выдает ошибку в консоли, так const нельзя присваивать другое значение
 
- let leftBorderWidth = 200;
+//  let leftBorderWidth = 200;
 
 //  Типы данных
 // number
@@ -23,8 +46,8 @@ const pi = 3.14;
 // confirm('Do you want to continue?');
 // console.log(321);
 
-number = 7;
-console.log(number);
+// number = 7;
+// console.log(number);
 
 // let answer = confirm('Вам есть 18 лет?');
 // console.log(answer);
@@ -80,12 +103,14 @@ console.log(number);
 // logging();
 
 
-function logging(a, b) {
-        console.log(a + b);
-    }
+// function logging(a, b) {
+//         console.log(a + b);
+//     }
     
-    logging(3, 6);
-    logging(3, 7);
+//     logging(3, 6);
+//     logging(3, 7);
 
 
+
+                              
 
