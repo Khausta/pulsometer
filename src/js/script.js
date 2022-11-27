@@ -1,25 +1,94 @@
+//     Tiny-slider
 
-$(document).ready(function(){
-        $('.carousel__inner').slick({
-                speed: 1200,
-                adaptiveHeight: true,
-                prevArrow: '<button type="button" class="slick-prev"><img src="../icons/carousel_prev_arrow.png"></button>',
-                nextArrow: '<button type="button" class="slick-next"><img src="../icons/carousel_next_arrow.png"></img></button>',
-                responsive: [
-                        {
-                        breakpoint: 768,
-                        settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 3,
-                                infinite: true,
-                                dots: true       
-                        }
+const slider = tns({
+        container: '.carousel__inner',
+        items: 1,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        responsive: {
+                640: {
+                  edgePadding: 20,
+                  gutter: 20,
+                  items: 1
+                },
+                700: {
+                  gutter: 30
+                },
+                900: {
+                  items: 1
                 }
-                ] 
-              });
-      });
+              }
+});
+
+document.querySelector('.prev').addEventListener('click', function () {
+        slider.goTo('prev');
+}); 
+
+document.querySelector('.next').addEventListener('click', function () {
+        slider.goTo('next');
+}); 
 
 
+
+//                        Slick-slider
+
+// $(document).ready(function(){
+//         $('.carousel__inner').slick({
+//                 speed: 1200,
+//                 autoplay: true,
+//                 autoplaySpeed: 2000,
+//                 prevArrow: '<button type="button" class="slick-prev"><img src="icons/carousel_prev_arrow.png"></button>',
+//                 nextArrow: '<button type="button" class="slick-next"><img src="icons/carousel_next_arrow.png"></button>',
+//                                         // responsive: [
+//                                         //         {
+//                                         //         breakpoint: 992,
+//                                         //         settings: {
+//                                         //                 dots: true,
+//                                         //                 arrows: false     
+//                                         //         }
+//                                         // }
+//                                         // ] 
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//                 responsive: [
+//                         {
+//                           breakpoint: 1024,
+//                           settings: {
+//                             slidesToShow: 1,
+//                             slidesToScroll: 1,
+//                             infinite: true
+//                           }
+//                         },
+//                         {
+//                           breakpoint: 600,
+//                           settings: {
+//                             slidesToShow: 1,
+//                             slidesToScroll: 1,
+//                             dots: true,
+//                             arrows: false
+//                           }
+//                         },
+//                         {
+//                           breakpoint: 480,
+//                           settings: {
+//                             slidesToShow: 1,
+//                             slidesToScroll: 1,
+//                             dots: true,
+//                             arrows: false
+//                           }
+//                         }
+//                         // You can unslick at a given breakpoint now by adding:
+//                         // settings: "unslick"
+//                         // instead of a settings object
+//                 ]
+//         });
+                                                    
+// });
+
+
+
+//            Переменные JS
 
 // var name = "Anna";
 // let number = 7;
@@ -30,7 +99,9 @@ $(document).ready(function(){
 
 //  let leftBorderWidth = 200;
 
-//  Типы данных
+
+//             Типы данных
+
 // number
 // string запись в "",'',``
 // boolean - true/false
@@ -42,6 +113,7 @@ $(document).ready(function(){
         //     color: 'red',
         //     weight: 100
         // } 
+
 // alert('Hello');
 // confirm('Do you want to continue?');
 // console.log(321);
@@ -69,6 +141,9 @@ $(document).ready(function(){
 
 // console.log(isChecked || isClosed);
 
+
+//       Циклы
+
 // if (2*4 == 3*1) {
 //     console.log('Верно')
 // } else {
@@ -95,6 +170,8 @@ $(document).ready(function(){
 // for (let i = 1; i < 8; i++) {
 //     console.log(i);
 // }
+
+//      Функции
 
 // function logging() {
 //     console.log(123456789);

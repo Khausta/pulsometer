@@ -1,11 +1,11 @@
 .carousel {
-    position: relative;
     padding: 81px 0;
     &__inner {
+        position: relative;
         width: 760px;
         margin: 0 auto;
     }
-    .slick-prev, .slick-next {
+    .prev, .next {
         position: absolute;
         top: 50%;
         transform: translateY(-50px);
@@ -17,8 +17,24 @@
             height: 50px;
         }
     }
-    .slick-next {
+    .next {
         right: -66px;
         left: auto;
     }
+    .tns-item {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .tns-nav {
+        text-align: center;
+        button {
+            background-color: red;
+        }
+        .tns-nav-active {
+            background-color: black;
+        }
+    }
+
 }
