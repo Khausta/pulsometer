@@ -1,12 +1,36 @@
+
 @media (max-width: 767px) {
     .promo {
         width: 100%;
-        background: url(../img/main_bg_mobile.jpg) center (center/cover) no-repeat;
+        background: url(../img/main_bg_mobile_version.jpg) center (center/cover) no-repeat;
         &__wrapper {
-            margin-right: 33px;
+            align-items: center;
         }
         .header {
-            justify-content: space-around;
+            flex-direction: column;
+            &__logo {
+                img {
+                    display: block;
+                    margin-bottom: 35px; 
+                }
+                
+            }
+            &__official {
+                margin-bottom: 5px;
+            }
+            &__contacts {
+                margin-top: 13px;
+            }
+        }
+        &__icons {
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        &__icon {
+            margin-bottom: 50px;
+            width: 260px;
+            font-size: 25px;
         }
     }
     .consultation {
@@ -19,8 +43,23 @@
         .feed_form {
             width: 500px;
             margin: 0 auto;
-            margin-top: 36px; 
+            margin-top: 36px;
+
       }
+
+    }
+    .carousel {
+        img {
+            width: 100%;
+        }
+    }
+    .catalog {
+        &__tabs {
+            flex-direction: column;
+        }
+        li {
+            margin-bottom: 5px;
+        }
 
     }
 }
@@ -32,7 +71,7 @@
             align-items: center;
         }
         &__header {
-            font-size: 53px;
+            font-size: 50px;
             text-align: center;
         }
         &__subheader {
