@@ -1,5 +1,7 @@
 //     Tiny-slider
 
+// const { on } = require("gulp");
+
 // const slider = tns({
 //         container: '.carousel__inner',
 //         items: 1,
@@ -118,8 +120,86 @@ $(document).ready(function(){
         }
         toggleSlide('.catalog-item__link');
         toggleSlide('.catalog-item__back');
+        
+        // Модальные окна
 
-                                                    
+        $('[data-modal=consultation]').on('click', function() {
+          $('.overlay, #consultation').fadeIn('slow');
+        });
+        $('.modal__close').on('click', function() {
+          $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+        });
+        // $('.button_mini').on('click', function() {
+        //   $('.overlay, #order').fadeIn('slow');
+        // });
+        $('.button_mini').each(function(i) {
+          $(this).on('click', function(){
+            $('#order .modal__desc').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+          });
+        });
+
+        // Можем удалить после того, как функцию ниже напишешь valideForm
+
+        // $('#consultation-form').validate();
+        // $('#consultation form').validate({
+        //   rules: {
+        //     name: {
+        //       required: true,
+        //       minlength: 2
+        //     },
+        //     phone: "required",
+        //     email: {
+        //       required: true,
+        //       email: true
+        //     }
+        //   },
+        //   messages: {
+        //     name: {
+        //       required: "Пожалуйста, введите Ваше имя",
+        //       minlength: jQuery.validator.format("Введите {0} символа и более")
+        //     },
+        //     phone: "Пожалуйста, введите Ваш номер телефона",
+        //     email: {
+        //       required: "Пожалуйста, введите адрес эл.почты",
+        //       email: "Неправильно введен номер почты"
+        //     }
+        //   }
+        // });
+        // $('#order form').validate();
+
+        function valideForms(form) {
+          $(form).validate({
+            rules: {
+              name: {
+                required: true,
+                minlength: 2
+              },
+              phone: "required",
+              email: {
+                required: true,
+                email: true
+              }
+            },
+            messages: {
+              name: {
+                required: "Пожалуйста, введите Ваше имя",
+                minlength: jQuery.validator.format("Введите {0} символа и более")
+              },
+              phone: "Пожалуйста, введите Ваш номер телефона",
+              email: {
+                required: "Пожалуйста, введите адрес эл.почты",
+                email: "Неправильно введен номер почты"
+              }
+            }
+          });
+        }
+        valideForms('#consultation-form');
+        valideForms('#consultation form');
+        valideForms('#order form');
+
+        $('input[name=phone').mask("+7 (999) 999-99-99");
+        
 });
 
 
