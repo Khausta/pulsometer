@@ -14,8 +14,8 @@
         border-radius: 100%;
     }
     &__info {
-        width: 680px;
-        margin-left: 61px;
+        max-width: 680px;
+        padding-left: 61px;
     }
     &__commentator {
         font-weight: 700;
