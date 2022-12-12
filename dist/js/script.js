@@ -138,11 +138,6 @@ $(document).ready(function(){
           });
         });
 
-        // $('[data-modal=thanks, data-modal=consultation-thanks]').on('click', function() {
-              
-        //   $('.overlay, #consultation').fadeOut();
-        //   $('.overlay, #thanks').fadeIn();
-
         // Можем удалить после того, как функцию ниже напишешь valideForm
 
         // $('#consultation-form').validate();
@@ -218,13 +213,11 @@ $(document).ready(function(){
           }).done(function() {
             $(this).find("input").val("");
             $('#consultation, #order').fadeOut();
-            $('.overlay, #thanks').fadeIn('slow');
-            $('form').trigger('reset'); 
-            });
-            return false;
-         });     
-
-
+            $('.overlay, #thanks').fadeIn(slow);
+            $('form').trigger('reset');
+          });
+          return false;
+        });
 
         // smooth scroll and pageup
 
