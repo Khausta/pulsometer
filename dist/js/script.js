@@ -225,6 +225,7 @@ $(document).ready(function(){
          });     
 
 
+
         // smooth scroll and pageup
 
         $(window).scroll(function() {

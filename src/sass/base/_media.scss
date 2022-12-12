@@ -120,7 +120,12 @@
             margin-left: -61px;
         }
     }
-    
+    .modal {
+        &__close {
+            transform: translate(-36px,-24px);
+            
+        }
+    }
 }
 @media (max-width: 479px) {
     .promo {
